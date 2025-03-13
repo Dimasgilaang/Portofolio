@@ -1,0 +1,421 @@
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #151925;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+/* Navbar */
+.navbar {
+  background-color: #151925 !important; /* Warna background navbar */
+  padding: 15px 0; /* Memberi sedikit ruang agar lebih nyaman */
+  transition: all 0.3s ease-in-out; /* Efek smooth saat berubah */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #06c2df !important; /* Warna biru saat hover/aktif */
+}
+
+/* Agar konten tidak tertutup navbar */
+body {
+  padding-top: 70px; /* Sesuaikan dengan tinggi navbar */
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px 0; /* Sedikit lebih kecil di layar kecil */
+  }
+
+  .navbar-nav {
+    text-align: center; /* Navbar lebih rapi di layar kecil */
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  background-color: #151925;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.text-primary {
+  color: #06c2df;
+}
+
+/* Ikon Sosial Media */
+.dev-icons {
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+.dev-icons a {
+  color: white;
+  transition: 0.3s ease;
+  margin: 0 10px;
+}
+
+.dev-icons a:hover {
+  color: #06c2df;
+}
+
+/* Tombol Resume */
+.btn-primary {
+  background-color: #06c2df;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #04a4c1;
+}
+
+/* Gambar Profil */
+.hero-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.hero-img {
+  width: 320px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img-container::before {
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 194, 223, 0.6) 20%, rgba(2, 171, 255, 0.1) 80%);
+  box-shadow: 0px 0px 50px rgba(6, 194, 223, 0.5);
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0;
+  }
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .hero-img {
+    width: 180px;
+  }
+  .hero-img-container::before {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* Services Section */
+#services h2 {
+  margin-bottom: 50px; /* Menambahkan jarak bawah pada judul */
+}
+
+.service-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card h4 {
+  color: cyan;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* About Section */
+#about {
+  background-color: #2b2f3a;
+  color: white;
+  padding: 80px 0;
+}
+
+#about h2 {
+  margin-bottom: 20px; /* Menambahkan jarak bawah pada judul */
+}
+
+#about .text-orange {
+  margin-bottom: 15px; /* Menambahkan jarak bawah pada teks "Web Developer" */
+}
+
+#about p {
+  margin-bottom: 10px; /* Menambahkan jarak antara paragraf */
+}
+
+.about-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.about-img-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 194, 223, 0.6) 20%, rgba(2, 171, 255, 0.1) 80%);
+  box-shadow: 0px 0px 50px rgba(6, 194, 223, 0.5);
+  z-index: 1;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.text-orange {
+  color: #ff8c00;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 200px;
+  }
+  .about-img-container::before {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Portfolio Section */
+#projects {
+  width: 100%;
+  color: white;
+  padding: 80px 0;
+}
+
+#projects h2 {
+  margin-bottom: 50px; /* Menambahkan jarak bawah pada judul */
+}
+
+.portfolio-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 15px 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-card h5 {
+  color: cyan;
+  margin-top: 10px;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Timeline Section */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  list-style: none;
+}
+
+#timeline h2 {
+  margin-bottom: 50px; /* Menambahkan jarak bawah pada judul */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #007bff;
+  transform: translateX(-50%);
+}
+
+.timeline li {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  background: #222;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline li:nth-child(odd) {
+  float: left;
+  clear: right;
+  text-align: right;
+}
+
+.timeline li:nth-child(even) {
+  float: right;
+  clear: left;
+  text-align: left;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #007bff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.timeline li:nth-child(odd)::before {
+  right: -8px;
+}
+
+.timeline li:nth-child(even)::before {
+  left: -8px;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+      left: 20px;
+  }
+
+  .timeline li {
+      width: 100%;
+      padding-left: 50px;
+      text-align: left;
+  }
+
+  .timeline li::before {
+      left: 20px;
+  }
+}
+
+
+/* Skills Section Styles */
+#skills h2 {
+  margin-bottom: 50px; /* Menambahkan jarak bawah pada judul */
+}
+
+#skills h4 {
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  font-size: 1.1rem;
+  background: #222;
+  padding: 10px;
+  margin: 5px 0;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+#skills ul li:hover {
+  background: #007bff;
+  color: white;
+  padding-left: 15px;
+}
+
+
+/* Contact Section */
+#contact .form-control {
+  background: #222;
+  color: white;
+  border: none;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#contact .form-control:focus {
+  background: #333;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #151925;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 10px 0;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}
