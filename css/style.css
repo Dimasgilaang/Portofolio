@@ -1,5 +1,6 @@
 /* General Styles */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -47,7 +48,6 @@ body {
   }
 }
 
-
 /* Hero Section */
 .hero {
   background-color: #151925;
@@ -84,6 +84,8 @@ body {
 
 /* Tombol Resume */
 .btn-primary {
+  position: relative;
+  display: flex;
   background-color: #06c2df;
   border: none;
   padding: 12px 30px;
@@ -92,6 +94,7 @@ body {
   transition: 0.3s ease;
   cursor: pointer;
   border-radius: 5px;
+  align-items: center;
 }
 
 .btn-primary:hover {
@@ -104,11 +107,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .hero-img {
-  width: 320px;
+  margin-bottom: 6.5rem;
+  width: 300px;
   height: auto;
   border-radius: 50%;
   position: relative;
@@ -142,7 +146,6 @@ body {
     height: 220px;
   }
 }
-
 
 /* Services Section */
 #services h2 {
@@ -194,6 +197,7 @@ body {
 }
 
 .about-img {
+  margin-bottom: 5.5rem;
   width: 250px;
   height: auto;
   border-radius: 50%;
@@ -280,7 +284,7 @@ body {
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -313,7 +317,7 @@ body {
 }
 
 .timeline li::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   width: 15px;
@@ -333,20 +337,19 @@ body {
 
 @media (max-width: 768px) {
   .timeline::before {
-      left: 20px;
+    left: 20px;
   }
 
   .timeline li {
-      width: 100%;
-      padding-left: 50px;
-      text-align: left;
+    width: 100%;
+    padding-left: 50px;
+    text-align: left;
   }
 
   .timeline li::before {
-      left: 20px;
+    left: 20px;
   }
 }
-
 
 /* Skills Section Styles */
 #skills h2 {
@@ -380,7 +383,6 @@ body {
   color: white;
   padding-left: 15px;
 }
-
 
 /* Contact Section */
 #contact .form-control {
